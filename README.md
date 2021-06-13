@@ -1,27 +1,18 @@
-# StarterAppWithLibrary
+# Angular Starter App With Library
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.3.
 
-## Development server
+## Steps followed to create this structure
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. ```ng new StarterAppWithLibrary --create-application=false``` This creates a workspace for us.
+2. ```ng g library magic-library --prefix=sd``` It creates a library with the given prefix. It overrides the ng prefix.
+3. ```ng g application sample-app``` It creates a regular angular application.
 
-## Code scaffolding
+Here the ```magic-library``` and ```sample-app``` uses the same node_modules.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running the project
 
-## Build
+Our project doesn't know about which project to serve, since we have multiple projects in our workspace.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+To run our sample app, we run the command ```ng serve sample-app```. We cannot run our library as it doesn't have an entry point and also the structure is different.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
