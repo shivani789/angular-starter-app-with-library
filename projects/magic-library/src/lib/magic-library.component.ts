@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { MagicLibraryService } from './magic-library.service';
 
 @Component({
   selector: 'sd-magic-library',
-  template: `
-    <p>
-      magic-library works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './magic-library.component.html',
+  styleUrls: ['./magic-library.component.scss']
 })
 export class MagicLibraryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private libraryService: MagicLibraryService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onRequest(){
+    console.log("CLicked!!");
+    this.libraryService.getRatings();
   }
-
 }
