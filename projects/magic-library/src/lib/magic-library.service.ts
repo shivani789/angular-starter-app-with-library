@@ -9,10 +9,13 @@ export class MagicLibraryService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getRatings() {
-    console.log("Hi from Service method!");
-    
-    // return this.httpClient
-    // .get('http://localhost:8080/list')
+  getRatings() {    
+    return this.httpClient
+    .get('http://localhost:8080/read')
+    .toPromise()
+    .then(res => { 
+      console.log(res);
+      return res; 
+    })
   }
 }

@@ -14,6 +14,7 @@ export class MagicLibraryComponent implements OnInit {
 
   onRequest(){
     console.log("CLicked!!");
-    this.libraryService.getRatings();
+    this.libraryService.getRatings()
+    .then(res => {console.log("Received Data:", res)} );
   }
 }
