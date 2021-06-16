@@ -7,7 +7,7 @@
 }
 .rate {
   float: left;
-  height: 46px;
+  height: 25px;
   padding: 0 10px;
 }
 .rate:not(:checked) > input {
@@ -20,7 +20,7 @@
   overflow:hidden;
   white-space:nowrap;
   cursor:pointer;
-  font-size:30px;
+  font-size:20px;
   color:#ccc;
 }
 .rate:not(:checked) > label:before {
@@ -31,14 +31,14 @@
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-  color: #deb217;  
+  color: #ffc700;  
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
-  color: #c59b08;
+  color: #ffc700;
 }
 
 .container {
@@ -49,8 +49,8 @@
 
 .button {
   display: inline-block;
-  padding: 10px 10px;
-  font-size: 18px;
+  padding: 5px 5px;
+  font-size: 10px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -58,15 +58,15 @@
   color: #fff;
   background-color: #4CAF50;
   border: none;
-  border-radius: 5px;
-  box-shadow: 0 5px #999;
+  border-radius: 2px;
+  box-shadow: 0 2px #999;
 }
 
 .button:hover {background-color: #3e8e41}
 
 .button:active {
   background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  box-shadow: 0 2px #666;
   transform: translateY(4px);
 }
 
